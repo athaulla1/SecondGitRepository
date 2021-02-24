@@ -1,0 +1,14 @@
+<html>
+<body>
+
+<form action="http://localhost:8000/add/" method="POST">
+{% csrf_token %}
+
+<input type=text name="n1" placeholder="Enter Number">
+<input type=text name="n2" placeholder="Enter Number">
+<input type="submit"></input>
+</form>
+
+
+</body>
+</html>

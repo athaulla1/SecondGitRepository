@@ -1,0 +1,27 @@
+<html>
+<body>
+   
+    <table border=2>
+
+      {% if qs %}  
+      <h1> These are records from Song Table - music app </h1>
+
+       <tr>
+       <th> Song Name </th>
+       <th> Singer</th>
+      
+       </tr>
+     {% for songrec in qs %}
+       <tr>
+         <td> {{songrec.sname}} </td>
+         <td> {{songrec.singer}} </<td>
+         
+       </tr>
+
+     {% endfor %}
+   </table>
+   {% else %}
+   <h1> No Songs to display which matched entered criteria </h1>
+   {% endif %}
+</body>
+</html> 

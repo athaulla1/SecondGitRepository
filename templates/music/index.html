@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    <h1> These are records from Album Table - music app </h1>
+
+    <table border=2>
+
+         {% if qs %}  
+        
+          <tr>
+          <th> Album ID</th>
+          <th> Album  Name </th>
+          <th> Album PIC URL </th>
+          <th> Album Music Dir </th>
+         
+          </tr>
+        {% for albumrec in qs %}
+          <tr>
+            <td> {{albumrec.album_id}} </td>
+            <td> {{albumrec.album_name}} </<td>
+            <td> {{albumrec.album_pic}} </td>
+            <td> {{albumrec.musdir}} </td>
+           
+          </tr>
+
+        {% endfor %}
+      </table>
+      {% else %}
+      <h1> No Album records to display which matched entered criteria </h1>
+      {% endif %}
+</body>
+</html> 

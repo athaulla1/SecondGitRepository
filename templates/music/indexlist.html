@@ -1,0 +1,23 @@
+<html>
+<body>
+    <h1> These are records from Album Table - music app </h1>
+
+        {% if qs %}  
+        
+        <ol>
+          {% for albumrec in qs %}
+
+          <!--<a href="http://localhost:8000/music/search/{{albumrec.album_id}}"><li> {{albumrec.album_name}} </li> </a> -->
+          
+
+          <a href="{% url 'music:musichome' %}search/{{albumrec.album_id}}"><li> {{albumrec.album_name}} </li> </a> 
+          {% endfor %}
+      </ol>
+
+      
+      {% else %}
+      <h1> No Album records to display which matched entered criteria </h1>
+      
+      {% endif %}
+</body>
+</html> 
